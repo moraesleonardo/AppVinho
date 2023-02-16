@@ -5,7 +5,7 @@
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">	
 	<meta charset="ISO-8859-1">
-	<title>Cadastro de Usuários</title>
+	<title>App Vinho</title>
 </head>
 <body>
 	<div class="container">

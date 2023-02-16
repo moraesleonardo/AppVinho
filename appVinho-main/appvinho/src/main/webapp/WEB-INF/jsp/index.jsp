@@ -13,7 +13,7 @@
   
   
   
-  <h3>Cadastro de <a href="/usuario">Usuario</a></h3>
+  <h3>Cadastro de <a href="/usuario/lista">Usuário</a></h3>
   
   </div>
 
