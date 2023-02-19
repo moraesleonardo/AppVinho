@@ -1,8 +1,7 @@
 package br.edu.infnet.appvinho.controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -12,21 +11,22 @@ import br.edu.infnet.appvinho.model.repository.UsuarioRepository;
 @Controller
 public class UsuarioController {
 	
-//	@RequestMapping(value = "/usuario", method = RequestMethod.GET)
+	private String msg;
+	
+	
 	@GetMapping(value = "/usuario")
 	public String telaCadastro() {
 		return "usuario/cadastro";
 	}
 	
 	@GetMapping(value = "/usuario/lista")
-	public String telaLista() {
+	public String telaLista(Model model) {
 		
-		List<Usuario> lista = UsuarioRepository.obterLista();
-		System.out.println("Quantidade de usuários = " + lista.size());
+		model.addAttribute("usuarios", UsuarioRepository.obterLista());
 		
-		for(Usuario user : lista) {
-			System.out.printf("%s - %s\n", user.getNome(), user.getEmail());
-		}
+		model.addAttribute("mensagem",msg);
+		
+		msg = null;
 		
 		return "usuario/lista";
 	}
@@ -35,6 +35,8 @@ public class UsuarioController {
 	public String incluir(Usuario usuario) {
 			
 		UsuarioRepository.incluir(usuario);
+		
+		msg = "A inclusão do usuário "+usuario.getNome()+" foi realizada com sucesso!!";
 		
 		return "redirect:/usuario/lista";
 	}
