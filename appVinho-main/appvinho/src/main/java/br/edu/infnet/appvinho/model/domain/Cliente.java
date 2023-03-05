@@ -3,7 +3,8 @@ package br.edu.infnet.appvinho.model.domain;
 import br.edu.infnet.appvinho.model.exceptions.ClienteInvalidoException;
 
 public class Cliente {
-
+	
+	private Integer id;
 	private String nome;
 	private String cpf;
 	private String email;
@@ -48,5 +49,11 @@ public class Cliente {
 	}
 	public String getEmail() {
 		return email;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

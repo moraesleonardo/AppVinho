@@ -4,18 +4,18 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Vinhos OnLine</a>
     </div>
     
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
 	  <c:if test="${not empty usuario}">	
 	      <li><a href="/usuario/lista">Usuário</a></li>
-	      <li><a href="#">Cliente</a></li>
+	      <li><a href="/cliente/lista">Cliente</a></li>
 	      <li><a href="#">Vinho</a></li>
-	      <li><a href="#">Tinto</a></li>
-	      <li><a href="#">Rose</a></li>
-	      <li><a href="#">Branco</a></li>
+	      <li><a href="/tinto/lista">Tinto</a></li>
+	      <li><a href="/rose/lista">Rose</a></li>
+	      <li><a href="/branco/lista">Branco</a></li>
 	      <li><a href="#">Compra</a></li>
       </c:if>
     </ul>

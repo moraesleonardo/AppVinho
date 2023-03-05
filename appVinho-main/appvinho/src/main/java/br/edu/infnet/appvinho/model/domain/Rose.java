@@ -5,6 +5,8 @@ import br.edu.infnet.appvinho.model.exceptions.ValorZeradoException;
 
 public class Rose extends Vinho {
 
+	private Integer id;
+	private String nome;
 	private boolean best_seller;
 	private int premios;
 	private String marca;
@@ -17,7 +19,7 @@ public class Rose extends Vinho {
 	@Override
 	public float calcularValorVenda() throws TamanhoRoseInvalidoException {
 		
-		if(premios > 5) {
+		if(premios > 3) {
 			throw new TamanhoRoseInvalidoException("O vinho só poderá ser vendido com reserva antecipada. Favor entrar em contato com o nosso setor de vendas pelo telefone!");
 		}
 		
@@ -39,6 +41,10 @@ public class Rose extends Vinho {
 		return sb.toString();
 	}
 	
+	public String getNome() {
+		return nome;
+	}
+		
 	public boolean isBest_seller() {
 		return best_seller;
 	}
@@ -53,5 +59,11 @@ public class Rose extends Vinho {
 	}
 	public String getMarca() {
 		return marca;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

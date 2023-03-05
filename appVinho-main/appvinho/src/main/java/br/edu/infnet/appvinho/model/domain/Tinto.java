@@ -5,6 +5,8 @@ import br.edu.infnet.appvinho.model.exceptions.ValorZeradoException;
 
 public class Tinto extends Vinho {
 
+	private Integer id;
+	private String nome;
 	private boolean gelada;
 	private int tamanho;
 	private String marca;
@@ -13,7 +15,7 @@ public class Tinto extends Vinho {
 		super(codigo, procedencia, valor);
 		this.marca = marca;
 	}
-
+	
 	@Override
 	public float calcularValorVenda() throws TamanhoTintoInvalidoException {
 		
@@ -39,6 +41,10 @@ public class Tinto extends Vinho {
 		return sb.toString();
 	}
 	
+	public String getNome() {
+		return nome;
+	}
+	
 	public boolean isGelada() {
 		return gelada;
 	}
@@ -53,5 +59,11 @@ public class Tinto extends Vinho {
 	}
 	public String getMarca() {
 		return marca;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

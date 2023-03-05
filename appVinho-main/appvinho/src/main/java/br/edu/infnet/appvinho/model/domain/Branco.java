@@ -5,6 +5,8 @@ import br.edu.infnet.appvinho.model.exceptions.ValorZeradoException;
 
 public class Branco extends Vinho {
 
+	private Integer id;
+	private String nome;
 	private boolean espumante;
 	private int pack;
 	private String marca;
@@ -39,6 +41,10 @@ public class Branco extends Vinho {
 		return sb.toString();
 	}
 	
+	public String getNome() {
+		return nome;
+	}
+	
 	public boolean isEspumante() {
 		return espumante;
 	}
@@ -54,4 +60,12 @@ public class Branco extends Vinho {
 	public String getMarca() {
 		return marca;
 	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	
 }
